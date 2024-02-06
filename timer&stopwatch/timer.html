@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            
+
+        }
+       .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid;
+        background: rgb(47, 186, 193);
+        
+        
+       }
+       .counter{
+         background-image: url(https://media.istockphoto.com/id/1300296030/photo/tropical-beach-palm-trees-sea-wave-and-white-sand.jpg?s=612x612&w=0&k=20&c=6xdlJDxSp5FVUpQC7AOt3ooHYPd3-gTQNF6lmwX5krk=);
+         background-repeat: no-repeat;
+         
+         height: 50%;
+        width: 35%;
+        text-align: center;
+        padding: 0px 10px;
+        box-shadow: 0px 0px 15px 2px ;
+        background-color: #e2e2e2e2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 80px;
+        
+       }
+       @media(width<=700px){
+        .counter{
+            height: 60%;
+        }
+       }
+      span{
+     
+       text-align: center;
+     
+        
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+      
+        padding: 0px 10px;
+        font-weight: 600;
+        
+      
+        margin-top: 40px;
+        color: rgb(255, 255, 255);
+        
+      
+        
+       }
+       span:hover{
+          cursor: pointer;
+       }
+
+       
+       h1{
+        font-size: 60px;
+        margin-top: 20px;
+       }
+      
+     
+      
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+   <div class="counter">
+     
+        <h1> 0:0:0</h1> 
+         <div class="conestant">
+        <span id="but" onclick="statwatch()">▶️</span>
+        <span id="bus" onclick="stop()">⏹️</span>
+        <span id="bu" onclick="restart()" >🔁</span>
+</div>
+   
+    </div>
+     </div>
+    
+    
+    <script>
+        
+        const counter = document.querySelector('h1');
+        const button = document.querySelector('#but');
+        const butto = document.querySelector('#bu');
+        let isstart = false;
+        let s="0";
+        let m ="0"
+        let h ="0"
+        let timer = false
+
+        function starter(){
+            s++;
+            if(s>59){
+                s = '0';
+                m++
+            }else if(m>59){
+                m ='0'
+                h++
+            }
+         
+
+            counter.innerHTML = h + ":"+ m +":"+ s
+            
+        }
+           
+          
+        
+        function statwatch(){
+            
+           timer =setInterval(starter , 1000)
+         
+        }
+        function stop(){
+            clearInterval(timer)
+        }
+        function restart(){
+            s='0'
+            m ='0'
+            h ='0'
+            counter.innerHTML = h + ":"+ m +":"+ s
+           
+        }
+
+   
+ 
+
+        </script>

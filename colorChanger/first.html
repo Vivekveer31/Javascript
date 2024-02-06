@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <button id="but" >Click Here to add color</button>
+    <script>
+           let index ='0';
+            let color =["gray" ,"green" ,"pink" ,"violet","yellow","orange"]
+           let button= document.querySelector('#but');
+           button.addEventListener('click',function(){
+            
+            document.querySelector('body').style.backgroundColor=color[index];
+            index++;
+           })
+       
+    </script>
+</body>
+
+</html>

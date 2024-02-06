@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" name=""  class="displaybox" readonly>
+        <div class="box1">
+            <button id="firstbut"   class="buttons"  onclick="currentDisplay='' ;document.querySelector('.displaybox').value = currentDisplay;">C</button>
+            <button class="buttons" onclick="currentDisplay+= '1';  document.querySelector('.displaybox').value = currentDisplay; ">1</button>
+            <button class="buttons" onclick="currentDisplay+= '2';  document.querySelector('.displaybox').value = currentDisplay; ">2</button>
+            
+           
+           
+        </div>
+        <div class="box1">
+            <button class="buttons" onclick="currentDisplay+= '+';  document.querySelector('.displaybox').value = currentDisplay; ">+</button>
+            <button class="buttons" onclick="currentDisplay+= '3';  document.querySelector('.displaybox').value = currentDisplay; ">3</button>
+            <button class="buttons" onclick="currentDisplay+= '4';  document.querySelector('.displaybox').value = currentDisplay; ">4</button>
+            
+        </div>
+        <div class="box1">
+            <button class="buttons" onclick="currentDisplay+= '-';  document.querySelector('.displaybox').value = currentDisplay; ">-</button>
+            <button class="buttons" onclick="currentDisplay+= '5';  document.querySelector('.displaybox').value = currentDisplay; ">5</button>
+            <button class="buttons" onclick="currentDisplay+= '6';  document.querySelector('.displaybox').value = currentDisplay; ">6</button>
+            
+         
+        </div>
+        <div class="box1">
+            <button class="buttons" onclick="currentDisplay+= '*';  document.querySelector('.displaybox').value = currentDisplay; ">*</button>
+            <button class="buttons" onclick="currentDisplay+= '7';  document.querySelector('.displaybox').value = currentDisplay; ">7</button>
+            <button class="buttons" onclick="currentDisplay+= '8';  document.querySelector('.displaybox').value = currentDisplay; ">8</button>
+            
+            
+        </div>
+        <div class="box1">
+            <button class="buttons" onclick="currentDisplay+= '/';  document.querySelector('.displaybox').value = currentDisplay; ">/</button>
+            <button class="buttons" onclick="currentDisplay=eval(currentDisplay); document.querySelector('.displaybox').value = currentDisplay;" >=</button>
+            <button class="buttons" onclick="currentDisplay+= '9';  document.querySelector('.displaybox').value = currentDisplay; ">9</button>
+            
+            
+        </div>
+        <div class="box1">
+            <button class="buttons" onclick="currentDisplay+= '0';  document.querySelector('.displaybox').value = currentDisplay; ">0</button>
+            <BUTTON class="buttons" onclick="currentDisplay='Smile' ;  document.querySelector('.displaybox').value = currentDisplay; ">SMILE</BUTTON>
+            <button class="buttons" onclick="currentDisplay+= '.';  document.querySelector('.displaybox').value = currentDisplay; ">.</button>
+            
+            
+            
+        </div>
+
+    </dv>
+    <script>
+        let currentDisplay = '';
+        // iff we diclated some input tag ten if we want to assig valu in it the we should not write .innertext we must write .value//
+        document.querySelector('.displaybox').value = currentDisplay;
+        
+
+    </script>
+</body>
+</html>

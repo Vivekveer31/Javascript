@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+        }
+    </style>
+</head>
+<body>
+    <button class="onbutton" style="margin: auto;"> ON </button>
+  <img src="https://media.istockphoto.com/id/502789173/photo/light-bulb-concept.jpg?s=612x612&w=0&k=20&c=vJfSDuFJf_4UsQcUsdMNUfDkkNU6Bf9cTHF-n4-Zwvs=" alt="" class="imgs" style="height: 200px; margin-left: 300px;" >
+ 
+    <script>
+        let num =0;
+        let onbutton = document.querySelector('.onbutton');
+        let imeges = document.querySelector('.imgs')
+        if(num==0){
+  
+        onbutton.addEventListener('click',function(){
+            imeges.src='https://d17td7dfmj97sg.cloudfront.net/wp-content/uploads/2015/03/lightbulb.jpg';
+          num+=1;
+          onbutton.innerHTML='OFF';
+
+        });
+    }else{
+        onbutton.addEventListener('click',function(){
+            imeges.src='https://media.istockphoto.com/id/502789173/photo/light-bulb-concept.jpg?s=612x612&w=0&k=20&c=vJfSDuFJf_4UsQcUsdMNUfDkkNU6Bf9cTHF-n4-Zwvs=';
+          num=0;
+          onbutton.innerHTML='ON';
+
+    });
+    }
+    const para = document.createElement("p");
+para.innerText = "This is a paragraph.";
+
+// Append to body:
+
+    </script>
+</body>
+</html>

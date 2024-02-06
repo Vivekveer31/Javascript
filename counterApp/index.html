@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            
+
+        }
+       .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid;
+        background: rgb(47, 186, 193);
+        
+       }
+       .counter{
+       
+        height: 28%;
+        width: 40%;
+        text-align: center;
+        padding: 0px 10px;
+        box-shadow: 0px 0px 30px 8px ;
+        background-color: #e2e2e2e2;
+       }
+       @media(width<=700px){
+        .counter{
+            height: 60%;
+        }
+       }
+       button{
+
+       text-align: center;
+        margin: 15px;
+        background: rgb(5, 18, 49);
+        border: none;
+        border-radius: 4px;
+        font-size: 25px;
+        box-shadow: 0px 0px 20px black;
+        padding: 0px 10px;
+        padding-bottom: 4px;
+        font-weight: 600;
+        border: 2px solid rgb(43, 41, 41);
+        margin-top: 40px;
+        color: rgb(255, 255, 255);
+        
+      
+        
+       }
+       h1{
+        font-size: 40px;
+        margin-top: 20px;
+       }
+      
+     
+      
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+   <div class="counter">
+  
+        <h1> Count : 0 </h1>
+        
+
+        
+        <button id="but">Increase</button>
+        <button id="bus">decrease</button>
+        <button id="bu">clear</button>
+   
+    </div>
+     </div>
+    
+    
+    <script>
+        
+        const counter = document.querySelector('h1');
+        const button = document.querySelector('#but');
+        const buttos = document.querySelector('#bus');
+        const butto = document.querySelector('#bu');
+        let count = '0';
+         button.addEventListener('click', result )
+         function result(){
+            count++
+            document.querySelector('h1').innerHTML = 'Count :'+" "+count
+        
+        
+         }
+         buttos.addEventListener('click',()=>{
+            count--
+            document.querySelector('h1').innerHTML = 'Count :'+" "+count
+         })
+         butto.addEventListener('click',()=>{
+            count ="0"
+            document.querySelector('h1').innerHTML = 'Count :'+" "+count
+         })
+
+        
+            
+         
+
+
+      
+    </script>
+</body>
+
+</html>

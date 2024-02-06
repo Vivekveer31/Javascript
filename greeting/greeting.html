@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        color: rgb(67, 211, 23);
+    }
+</style>
+<body>
+    <h1>Hello,<span>Good morning</span></h1>
+    <script>
+     const greet = document.querySelector('span');
+      let time = new Date( )
+        let h =time.getHours()
+        
+        let namskar ="";
+
+
+        if(h>=1 && h<12){
+            namskar="Good morning"
+        }else if(h>=12  && h<=18){
+            namskar = " Good Afternoon"
+        }else{
+            namskar =" good night"
+        }
+
+        greet.innerHTML=namskar;
+      
+      
+       document.querySelector('h1').style.textAlign ='center'
+
+
+    </script>
+</body>
+
+</html>
